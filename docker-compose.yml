@@ -1,0 +1,45 @@
+version: '2.2'
+services:
+  es-node:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.9.0
+    container_name: es-$ENV
+    environment:
+      - node.name=es-$ENV
+      - cluster.name=es-docker-cluster
+      - discovery.type=single-node
+      # - discovery.seed_hosts=es02,es03
+      # - cluster.initial_master_nodes=es01,es02,es03
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - ELASTIC_PASSWORD=$ES_DB_PASSWORD
+      - xpack.security.enabled=true
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - data01:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    networks:
+      - elastic
+
+  kibana-node:
+    image: docker.elastic.co/kibana/kibana:7.9.0
+    container_name: kibana-$ENV
+    ports:
+      - 5601:5601
+    environment:
+      ELASTICSEARCH_URL: $ES_DB_URL
+      ELASTICSEARCH_HOSTS: '["http://es-$ENV:9200"]'
+      ELASTICSEARCH_USERNAME: elastic
+      ELASTICSEARCH_PASSWORD: $ES_DB_PASSWORD
+    networks:
+      - elastic
+volumes:
+  data01:
+    driver: local
+
+networks:
+  elastic:
+    driver: bridge
