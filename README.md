@@ -26,7 +26,7 @@
 - **Testing**: unit using [mochajs](https://mochajs.org/) and [chai](https://www.chaijs.com/)
 - **Environment variables**: using [dotenv-flow](https://www.npmjs.com/package/dotenv-flow)
 - **CI**: continuous integration with [Github workflows](https://guides.github.com/introduction/flow/)
-- **Docker support using docker compuse**
+- **Docker support using docker compose**
 
 ## Commands
 
@@ -160,5 +160,6 @@ To modify the ESLint configuration, update the `.eslintrc.json` file. To modify 
 - Add [postgres](https://hub.docker.com/_/postgres) to the docker cluster and utilize [sequalize](https://sequelize.org/) as ORM
 - API documentation auto generation using [swagger](https://www.npmjs.com/package/swagger)
 - Create ORM for elasticsearch for data migration and efficiency 
-- Graceful shutdown of express app 
+- Graceful shutdown of express app
+- Handle image uploads 
 - Enable cors 
