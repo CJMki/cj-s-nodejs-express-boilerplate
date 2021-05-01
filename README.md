@@ -1,6 +1,6 @@
 ![test](https://github.com/CJMki/cj-s-nodejs-express-boilerplate/actions/workflows/workflow-test.yml/badge.svg)   ![build](https://github.com/CJMki/cj-s-nodejs-express-boilerplate/actions/workflows/workflow-build.yml/badge.svg)
 
-- Inspired from from [hagopj13's-nodexpress-boilerplate](https://github.com/hagopj13/node-express-boilerplate)
+- Inspired from [hagopj13's-nodexpress-boilerplate](https://github.com/hagopj13/node-express-boilerplate)
 
 ## Table of Contents
 
@@ -98,15 +98,15 @@ List of available routes:
 
 **Search routes**:\
 `GET /v1/search` - seach items by text\
-`GET /v1/suggest` - suggest items using elasticsearch's search as you type feature\
+`GET /v1/suggest` - suggest items by text (using elasticsearch's search as you type feature)\
 `GET /v1/filter` - filter items by query
 
 ## Databases
 
-### NOSQL - Elasticsearc
+### NOSQL - Elasticsearch
 
-- Kibana instace is added to the docker clust to visualize data
-- Use username : elastic and password : root to login as security is enabled in the docker clust
+- Kibana instance is added to the docker clust to visualize data
+- Use username : elastic and password : root to login as security is enabled in the docker cluster
 ### SQL - Postgres
 
 - Please check the [TODO list](#todo-list)
@@ -114,7 +114,7 @@ List of available routes:
 
 The express app has a centralized error handling mechanism.
 
-This utility will catch the errors propagated withing the app from the error handling middleware (by calling `next(error)`). For convenience, you can wrap the routes inside the catchExpressExceptions utility wrapper, which forwards the error.
+This utility will catch the errors propagated within the app from the error handling middleware (by calling `next(error)`). For convenience, you can wrap the routes inside the catchExpressExceptions utility wrapper, which forwards the error.
 
 ```javascript
 import cee from '../../util/catchExpressExceptions';
@@ -136,7 +136,7 @@ When running in development mode, the error response also contains the error sta
 ## Environment Variables
 
 The environment variables can be found and modified in the `.env` files. 
-- keep the general variables in the `.env` file and use .env.*env mode* files for values which are specific the certain mode.
+- keep the general variables in the `.env` file and use .env.*env mode* files for values which are specific to a certain mode.
 - create .env.*.locally using a CI when running in production because it is not recommended to commit sensitive information to the repository. 
 
 ## Validation
