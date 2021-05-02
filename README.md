@@ -105,7 +105,7 @@ List of available routes:
 
 ### NOSQL - Elasticsearch
 
-- Kibana instance is added to the docker clust to visualize data
+- Kibana instance is added to the docker cluster to visualize data
 - Use username : elastic and password : root to login as security is enabled in the docker cluster
 ### SQL - Postgres
 
