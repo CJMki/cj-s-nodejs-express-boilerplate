@@ -31,3 +31,6 @@ node_modules/
 # dotenv environment variables file
 .env.*.local
 
+#ide related configurations 
+.vscode/
+
