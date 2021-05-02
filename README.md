@@ -153,7 +153,7 @@ In this app, ESLint is configured to follow the [Prettier JavaScript style guide
 
 To modify the ESLint configuration, update the `.eslintrc.json` file. To modify the Prettier configuration, update the `.prettierrc.json` file.
 
-## TODO list
+## Todo list
 
 - Authentication and authorization
 - Test mocking using [elastic-mock](https://www.npmjs.com/package/@elastic/elasticsearch-mock)
