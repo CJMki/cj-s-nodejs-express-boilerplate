@@ -13,7 +13,7 @@
 - [Environment Variables](#environment-variables)
 - [Validation](#validation)
 - [Linting](#linting)
-- [Todo list](#todo)
+- [Todo list](#todo-list)
 
 
 ## Features
@@ -155,7 +155,8 @@ To modify the ESLint configuration, update the `.eslintrc.json` file. To modify 
 
 ## Todo list
 
-- Authentication and authorization
+- Authentication and authorization using [jwt](https://www.npmjs.com/package/jsonwebtoken)
+- Implement caching mechanism 
 - Test mocking using [elastic-mock](https://www.npmjs.com/package/@elastic/elasticsearch-mock)
 - Add [postgres](https://hub.docker.com/_/postgres) to the docker cluster and utilize [sequalize](https://sequelize.org/) as ORM
 - API documentation auto generation using [swagger](https://www.npmjs.com/package/swagger)
